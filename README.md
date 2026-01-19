@@ -190,3 +190,4 @@ MIT License - Use it, fork it, ship it! See [LICENSE](LICENSE).
   <a href="https://github.com/SamuelDevdas/skill-vibe-kanban/fork">🍴 Fork</a> •
   <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Claude%20Code%20skill%20for%20Vibe%20Kanban!&url=https://github.com/SamuelDevdas/skill-vibe-kanban">🐦 Tweet</a>
 </p>
+
