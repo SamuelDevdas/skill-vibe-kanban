@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Claude%20Code-Skill-blueviolet?style=for-the-badge&logo=anthropic" alt="Claude Code Skill"/>
   <img src="https://img.shields.io/badge/Vibe%20Kanban-Integration-ff6b6b?style=for-the-badge" alt="Vibe Kanban"/>
-  <img src="https://img.shields.io/github/license/SamuelDevdas/skill-vibe-kanban?style=for-the-badge" alt="License"/>
+  <img src="https://img.shields.io/github/license/SamuelDevdas/skill-vibe-kanban?style=for-the-badge&cacheSeconds=0" alt="License"/>
   <img src="https://img.shields.io/github/stars/SamuelDevdas/skill-vibe-kanban?style=for-the-badge" alt="Stars"/>
 </p>
 
