@@ -70,6 +70,28 @@ git clone https://github.com/SamuelDevdas/skill-vibe-kanban.git ~/.claude/skills
 ~/.claude/skills/vibe-kanban/scripts/vk-helper.sh list-projects
 ```
 
+## 🔌 MCP Quick Reference
+
+When MCP tools aren't loaded, use JSON-RPC directly:
+
+```bash
+# List all projects
+(cat << 'EOF'
+{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"claude-code","version":"1.0"}}}
+{"jsonrpc":"2.0","method":"notifications/initialized"}
+{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"list_projects","arguments":{}}}
+EOF
+sleep 2) | npx -y vibe-kanban@latest --mcp 2>/dev/null | grep '"id":2'
+
+# Create a task
+{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"create_task","arguments":{"project_id":"<UUID>","title":"My task"}}}
+
+# Update task status
+{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"update_task","arguments":{"task_id":"<UUID>","status":"inprogress"}}}
+```
+
+**Available MCP Tools:** `list_projects`, `list_tasks`, `create_task`, `get_task`, `update_task`, `delete_task`, `list_repos`, `start_workspace_session`
+
 ## 📦 Installation
 
 ### Option 1: One-Line Install (Recommended)

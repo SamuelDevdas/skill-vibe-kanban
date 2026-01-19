@@ -7,7 +7,7 @@ description: |
   Vibe Kanban's MCP server, (5) automating task workflows end-to-end. Covers REST API,
   MCP JSON-RPC protocol, workspace sessions, and task lifecycle management.
 author: Claude Code
-version: 1.0.0
+version: 1.0.1
 date: 2026-01-19
 ---
 
@@ -92,8 +92,8 @@ curl -s -X POST "http://127.0.0.1:50556/api/tasks" \
   -H "Content-Type: application/json" \
   -d '{"project_id":"<uuid>","title":"Task title","description":"Optional description"}' | jq '.'
 
-# Update a task (PATCH)
-curl -s -X PATCH "http://127.0.0.1:50556/api/tasks/{task_id}" \
+# Update a task (PUT - NOT PATCH)
+curl -s -X PUT "http://127.0.0.1:50556/api/tasks/{task_id}" \
   -H "Content-Type: application/json" \
   -d '{"title":"New title","status":"inprogress"}' | jq '.'
 
